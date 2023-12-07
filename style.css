@@ -1,0 +1,200 @@
+
+
+/*corpo do site*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, #8e6c58, #f7dfae);
+    margin: 0;
+}
+
+/*jogo da velha principal*/
+.game-board {
+    display: grid;
+    width: 609px;
+    height: 609px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3,auto);
+}
+.cell{
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cell[data-cell="1"],
+.cell[data-cell="4"],
+.cell[data-cell="7"]{
+    border-top: none;
+}
+.cell[data-cell="1"],
+.cell[data-cell="2"],
+.cell[data-cell="3"] {
+    border-left: none;
+}
+.cell[data-cell="7"],
+.cell[data-cell="8"],
+.cell[data-cell="9"] {
+    border-right: none;
+}
+.cell[data-cell="3"],
+.cell[data-cell="6"],
+.cell[data-cell="9"] {
+    border-bottom: none;
+}
+
+.sub-game{
+    display: grid;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.sub-cell{
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(234, 234, 234);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: ease-out 0.2s;
+}
+.sub-game:hover{
+    cursor: pointer;
+}
+.sub-game.clicked {
+    width: 100%;
+    height: 100%;
+}
+.sub-cell.clicked {
+    border: 1.7px solid rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    transition: ease-in 0.2s;
+}
+
+.sub-cell[subdata-cell="1"],
+.sub-cell[subdata-cell="4"],
+.sub-cell[subdata-cell="7"] {
+    border-top: none;
+}
+
+.sub-cell[subdata-cell="1"],
+.sub-cell[subdata-cell="2"],
+.sub-cell[subdata-cell="3"] {
+    border-left: none;
+}
+
+.sub-cell[subdata-cell="7"],
+.sub-cell[subdata-cell="8"],
+.sub-cell[subdata-cell="9"] {
+    border-right: none;
+}
+
+.sub-cell[subdata-cell="3"],
+.sub-cell[subdata-cell="6"],
+.sub-cell[subdata-cell="9"] {
+    border-bottom: none;
+}
+
+
+/* Estilos para X */
+.sub-cell.clicked.x::before {
+    content: "X";
+    color: #90603b;
+    /* Cor vermelha para X */
+    font-size: 2em;
+    /* Tamanho da fonte */
+}
+
+/* Estilos para O */
+.sub-cell.clicked.o::before {
+    content: "O";
+    color: #7a7a36;
+    /* Cor azul para O */
+    font-size: 2em;
+    /* Tamanho da fonte */
+}
+.sub-cell[data-state = x]::before{
+        content: "X";
+        color: #90603b;
+        /* Cor vermelha para X */
+        font-size: 1em;
+        /* Tamanho da fonte */
+}
+.sub-cell[data-state=o]::before {
+    content: "O";
+    color: #7a7a36;
+    /* Cor vermelha para X */
+    font-size: 1em;
+    /* Tamanho da fonte */
+}
+
+.cell[data-winner='o']::after {
+    content: "O";
+    color: rgb(255, 255, 255);
+    background-color: rgb(44, 201, 44);
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 1em;
+    /* Ajuste o tamanho da fonte conforme necessário */
+    position: absolute;
+    left: 83%;
+    top: 80%;
+    /* Posicionamento absoluto em relação à .cell */
+    z-index: 1;
+}
+
+
+.win-msg[champion="o"]::after {
+    content: "O Ganhou!";
+    color: white;
+    background-color: rgb(44, 201, 44);
+    width: 400px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 5em;
+    /* Ajuste o tamanho da fonte conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Posicionamento absoluto em relação à .cell */
+    z-index: 1;
+}
+
+.win-msg[champion="x"] {
+    content: "X Ganhou!";
+    /* estilos específicos para quando o jogador X ganha */
+    background-color: beige;
+    /* substitua com o caminho real da sua imagem de fundo */
+    color: white;
+    /* cor do texto */
+    font-size: 2em;
+    /* tamanho do texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* ou o tamanho que você deseja para a área de exibição da mensagem */
+}

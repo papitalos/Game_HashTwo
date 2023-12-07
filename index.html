@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jogo da Velha 2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="win-msg" champion="empty"></div>
+    <div class="game-board" data-big-win="empty">
+      <div class="row">
+        <div class="cell" data-cell="1" data-winner="empty">
+          <div class="sub-game" subdata-game="1" sub-game-state="empty">
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="1"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="2"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="3"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="4"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="5"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="6"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="7"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="8"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="9"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" data-cell="2" data-winner="empty">
+          <div class="sub-game" subdata-game="2" sub-game-state="empty">
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="1"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="2"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="3"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="4"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="5"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="6"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="7"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="8"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="9"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" data-cell="3" data-winner="empty">
+          <div class="sub-game" subdata-game="3" sub-game-state="empty">
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="1"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="2"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="3"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="4"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="5"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="6"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="7"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="8"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="9"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell" data-cell="4" data-winner="empty">
+          <div class="sub-game" subdata-game="4" sub-game-state="empty">
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="1"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="2"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="3"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="4"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="5"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="6"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="7"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="8"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="9"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" data-cell="5" data-winner="empty">
+          <div class="sub-game" subdata-game="5" sub-game-state="empty">
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="1"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="2"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="3"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="4"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="5"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="6"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="7"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="8"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="9"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" data-cell="6" data-winner="empty">
+          <div class="sub-game" subdata-game="6" sub-game-state="empty">
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="1"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="2"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="3"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="4"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="5"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="6"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="7"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="8"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="9"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell" data-cell="7" data-winner="empty">
+          <div class="sub-game" subdata-game="7" sub-game-state="empty">
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="1"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="2"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="3"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="4"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="5"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="6"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="7"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="8"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="9"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" data-cell="8" data-winner="empty">
+          <div class="sub-game" subdata-game="8" sub-game-state="empty">
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="1"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="2"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="3"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="4"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="5"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="6"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="7"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="8"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="9"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell" data-cell="9" data-winner="empty">
+          <div class="sub-game" subdata-game="9" sub-game-state="empty">
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="1"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="2"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="3"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="4"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="5"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="6"></div>
+            </div>
+            <div class="sub-row">
+              <div class="sub-cell" data-state="empty" subdata-cell="7"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="8"></div>
+              <div class="sub-cell" data-state="empty" subdata-cell="9"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
